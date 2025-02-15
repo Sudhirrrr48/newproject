@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guess Glow</title>
+    <link rel="stylesheet" href="numberguess.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>-Number Guess Glow-</h1>
+    <div class="container">
+        <p>Choose a difficulty and guess the number!</p>
+        <select id="difficulty">
+            <option value="easy">Easy (1-10, 5 attempts)</option>
+            <option value="medium">Medium (1-50, 8 attempts)</option>
+            <option value="hard">Hard (1-100, 14 attempts)</option>
+        </select>
+        <br>
+        <button id="startBtn" onclick="startGame()">Start Game</button>
+        <div id="gameArea" style="display:none;">
+            <p>Guess a number:</p>
+            <input type="number" id="guess" min="1">
+            <button onclick="checkGuess()">Submit</button>
+            <p id="message"></p>
+            <button id="restartBtn" style="display:none;" onclick="restartGame()">Restart</button>
+        </div>
+    </div>
+    <script src="numberguess.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap');
+        
+        body {
+            margin: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            color: lime;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            animation: glowBackground 3s infinite alternate;
+        }
+        
+        @keyframes glowBackground {
+            0% { background-color: black; }
+            100% { background-color: darkgreen; }
+        }
+        
+        h1 {
+            font-size: 36px;
+            text-shadow: 0 0 10px lime, 0 0 20px lime;
+            animation: glowText 1.5s infinite alternate;
+        }
+        
+        @keyframes glowText {
+            0% { text-shadow: 0 0 10px lime, 0 0 20px lime; }
+            100% { text-shadow: 0 0 20px lime, 0 0 40px lime; }
+        }
+        
+        #scoreboard {
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: 0 0 10px yellow;
+        }
+        
+        canvas {
+            border: 2px solid lime;
+            box-shadow: 0 0 15px lime;
+        }
+        
+        button {
+            margin-top: 10px;
+            padding: 12px;
+            font-size: 18px;
+            font-family: 'Orbitron', sans-serif;
+            background: lime;
+            color: black;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 10px lime;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        button:hover {
+            box-shadow: 0 0 20px lime, 0 0 30px lime;
+            transform: scale(1.1);
+        }

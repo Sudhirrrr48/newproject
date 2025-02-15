@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Glowing Animated Background */
+@keyframes neonGlow {
+    0% { background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(0,0,0,1) 100%); }
+    50% { background: radial-gradient(circle, rgba(100,20,200,1) 10%, rgba(0,0,0,1) 100%); }
+    100% { background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(0,0,0,1) 100%); }
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: neonGlow 6s infinite alternate;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px cyan, 0 0 20px blue;
+}
+
+.scoreboard {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Tic-Tac-Toe Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    width: 330px;
+}
+
+/* Glowing Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.cell:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
+/* Glowing Buttons */
+button {
+    background: transparent;
+    border: 2px solid cyan;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+    box-shadow: 0 0 10px cyan;
+}
+
+button:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 20px cyan;
+}
+
+/* Winner Message */
+.winner-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid cyan;
+    box-shadow: 0 0 20px cyan;
+    animation: glowWinner 1s infinite alternate;
+}
+
+/* Winner Glow */
+@keyframes glowWinner {
+    0% { box-shadow: 0 0 10px cyan; }
+    100% { box-shadow: 0 0 30px cyan; }
+}

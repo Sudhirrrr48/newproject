@@ -1,0 +1,65 @@
+body {
+            margin: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            color: cyan;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            animation: glowBackground 3s infinite alternate;
+        }
+        @keyframes glowBackground {
+            0% { background-color: black; }
+            100% { background-color: darkblue; }
+        }
+        .container {
+            padding: 20px;
+            border: 2px solid cyan;
+            box-shadow: 0 0 15px cyan;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        button, input, select {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            font-family: 'Press Start 2P', cursive;
+        }
+        button {
+            background: cyan;
+            color: black;
+            cursor: pointer;
+            box-shadow: 0 0 10px cyan;
+        }
+        button:hover {
+            box-shadow: 0 0 20px cyan;
+        }
+        input {
+            text-align: center;
+            width: 60px;
+            background: black;
+            color: cyan;
+            border: 2px solid cyan;
+        }
+        #message {
+            margin-top: 15px;
+            font-size: 14px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes winAnimation {
+            0% { color: lime; transform: scale(1); }
+            50% { color: yellow; transform: scale(1.2); }
+            100% { color: lime; transform: scale(1); }
+        }
+        @keyframes loseAnimation {
+            0% { color: red; transform: scale(1); }
+            50% { color: orange; transform: scale(1.2); }
+            100% { color: red; transform: scale(1); }
+        }
